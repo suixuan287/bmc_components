@@ -65,9 +65,6 @@ const config = {
             },
         ],
     },
-    externals: {
-        'ElementPlus': 'element-plus'
-    }
 };
 
 const entry = {};
@@ -81,7 +78,7 @@ jsFiles.forEach((item) => {
             filename: `${pageName}.html`,
             chunks: [`${pageName}`],
             inject: 'body',
-            template: path.resolve(__dirname, "template/pc.template.html"),
+            template: path.resolve(__dirname, "template/h5.template.html"),
         })
     );
     entry[pageName] = `./src/pages/${pageName}/index.js`;
